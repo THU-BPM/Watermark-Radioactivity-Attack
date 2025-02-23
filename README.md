@@ -1,5 +1,5 @@
 # Watermark-Radioactivity-Attack
-Code and data for paper "Can LLM Watermarks Robustly Prevent Unauthorized Knowledge Distillation".
+Code and data for paper "Can LLM Watermarks Robustly Prevent Unauthorized Knowledge Distillation?".
 
 <img src="img/overview.png" alt="overview" />
 
