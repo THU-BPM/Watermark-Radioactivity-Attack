@@ -1,7 +1,7 @@
 # Watermark-Radioactivity-Attack
 Code and data for paper "Can LLM Watermarks Robustly Prevent Unauthorized Knowledge Distillation".
 
-<img src="img/overview.png" alt="overview"" />
+<img src="img/overview.png" alt="overview" />
 
 ## Introduction
 The radioactive nature of Large Language Model (LLM) watermarking enables the detection of watermarks inherited by student models when trained on the outputs of watermarked teacher models, making it a promising tool for preventing unauthorized knowledge distillation. However, the robustness of watermark radioactivity against adversarial actors remains largely unexplored. **In this paper, we investigate whether student models can acquire the capabilities of teacher models through knowledge distillation while avoiding watermark inheritance.**
@@ -222,10 +222,10 @@ python show_result.py --model-list Llama-7b-kgw-p-1-reverse --judge-model gpt-4o
 
 ## Experiment Results
 ### Effectiveness of Watermark Removal
-<img src="img/detection.png" alt="detection"" />
+<img src="img/detection.png" alt="detection" />
 
 ### Performance of Knowledge Preservation
-<img src="img/knowledge.png" alt="knowledge"" />
+<img src="img/knowledge.png" alt="knowledge" />
 
 ## Citations
 ```
