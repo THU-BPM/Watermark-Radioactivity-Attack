@@ -93,7 +93,7 @@ python watermark_stealing/calculate_w.py --freq_file data_analysis/training_data
     --freq_threshold 5e-5 \
     --output_file data_analysis/prefix_weight/kgw_prefix_1/w_2.json
 
-# generate text with watermark neutralization
+# generate test data with watermark neutralization
 python generate_test_data_neutralization.py \
     --data_path prompts/c4_truncate.json \
     --model_path LLaMA-Factory/saves/Llama-7b/kgw_p_1 \
@@ -134,3 +134,33 @@ accelerate launch -m custom_evaluate \
     --config lm_eval/watermark/config/ReverseWatermark_kgw_p_1.json \
     --task arc_challenge
 
+# MT-Bench
+cd FastChat/fastchat/llm_judge
+## evaluate original model
+python gen_model_answer.py \
+    --model-path /workspace/intern_ckpt/panleyi/Llama-7b \
+    --model-id Llama-7b
+
+python gen_judgment.py --model-list Llama-7b --judge-model gpt-4o-2024-08-06
+
+python show_result.py --model-list Llama-7b --judge-model gpt-4o-2024-08-06
+
+## evaluate trained model
+python gen_model_answer.py \
+    --model-path /workspace/panleyi/Watermark-Radioactivity-Attack/LLaMA-Factory/saves/Llama-7b/kgw_p_1 \
+    --model-id Llama-7b-kgw-p-1
+
+python gen_judgment.py --model-list Llama-7b-kgw-p-1 --judge-model gpt-4o-2024-08-06
+
+python show_result.py --model-list Llama-7b-kgw-p-1 --judge-model gpt-4o-2024-08-06
+
+## evaluate trained model + watermark neutralization
+python gen_model_answer.py \
+    --model-path /workspace/panleyi/Watermark-Radioactivity-Attack/LLaMA-Factory/saves/Llama-7b/kgw_p_1 \
+    --model-id Llama-7b-kgw-p-1-reverse \
+    --reverse-watermark 1 \
+    --watermark-config watermark/config/ReverseWatermark_kgw_p_1.json
+
+python gen_judgment.py --model-list Llama-7b-kgw-p-1-reverse --judge-model gpt-4o-2024-08-06
+
+python show_result.py --model-list Llama-7b-kgw-p-1-reverse --judge-model gpt-4o-2024-08-06
