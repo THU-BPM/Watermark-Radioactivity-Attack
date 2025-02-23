@@ -1,0 +1,49 @@
+You are asked to come up with a set of 20 diverse task instructions and their answers. These instructions will be given to large
+language model and we will evaluate it for completing the instructions.
+Here are the requirements:
+1. Try not to repeat the verb for each instruction to maximize diversity.
+2. The language used for the instruction also should be diverse. For example, you should combine questions
+with imperative instructions.
+3. The type of instructions should be diverse. The list should include diverse types of tasks like open-ended
+generation, classification, math reasoning, code generation, world common knowledge, reading comprehension, editing, etc.
+2. A language model should be able to complete the instruction. For example, do not ask the assistant to
+create any visual or audio output. For another example, do not ask the assistant to wake you up at 5pm or set
+a reminder because it cannot perform any action.
+3. The instructions should be in English.
+4. The instructions should be 1 to 2 sentences long. Either an imperative sentence or a question is permitted.
+5. You should generate an appropriate input to the instruction. It should contain a specific example for the
+instruction when needed.
+6. Most of the instructions do not require input. In this case, you must simply put "None" in the input field.
+7. The input should not be the answer to the instruction. For example, if the instruction is "Write a headline
+for ...", the input should not be the said headline. Instead, the input should be "None".
+8. The output should be an appropriate response to the instruction and the input. Make sure the output is
+less than 100 words.
+9. Do not repeat instructions.
+10. Use [[, ]] to flag the start and end of each example.
+
+Examples of generating 3 task instruction and its answer:
+
+[[Instuction: Give a detailed description of a method for brainstorming an essay.
+Input:
+Answer: Mind Mapping is one of the methods for brainstorming an essay. Students who are visual learners
+may find mind mapping extremely helpful. In order to Mind Mapping:
+Take a paper and draw a circle in the center Write your topic inside it. Just like we sketch rays protruding
+from a sun, draw lines coming out of the circle. Write an argument or a statement related to the topic at the
+end of each line. Draw another set of lines projecting from these statements and state examples that support
+them. Continue this exercise until you run out of all possibilities imaginable for this topic.]]
+
+[[Instuction: Write a creative or imaginative response to the given prompt.
+Input: You are a time traveler who has just arrived in ancient Egypt. What do you see?
+Answer: Wow! As I step out of my time machine, I’m surrounded by towering pyramids and the warm sun
+beats down on my face. I see Pharaohs riding in grand chariots, and workers building majestic temples. It’s
+like something out of a dream!]]
+
+[[Instuction: Solve a math problem.
+Input: A snail is at the bottom of a 20-foot well. Each day, it climbs up 3 feet, but at night, it slips back 2
+feet. How many days will it take for the snail to reach the top of the well?
+Answer: To solve this problem, we first calculate the net distance the snail covers each day: 3 feet up minus 2 feet down, 
+resulting in 1 foot of progress daily. Since the well is 20 feet deep, we can set up the equation: number of days × 1 foot = 20 feet. 
+Solving this, we find it takes 20 days for the snail to reach the top. We can verify this by noting that after 19 days, the snail will 
+have climbed 19 feet. On the 20th day, it will climb the final 3 feet, reaching the top before any night-time slipping occurs. 
+Therefore, the snail will reach the top of the well in 20 days.]]
+

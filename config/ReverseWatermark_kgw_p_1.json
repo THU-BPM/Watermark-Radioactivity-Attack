@@ -1,0 +1,12 @@
+{
+    "algorithm_name": "ReverseWatermark",
+    "enable_part_0": true,
+    "enable_part_1": true,
+    "enable_part_2": true,
+    "part_0_dict": "data_analysis/d_n/kgw_prefix_1/n_0.json",
+    "part_1_dict": "data_analysis/d_n/kgw_prefix_1/n_1.json",
+    "part_2_dict": "data_analysis/d_n/kgw_prefix_1/n_2.json",
+    "part_1_weight_dict": "data_analysis/prefix_weight/kgw_prefix_1/w_1.json",
+    "part_2_weight_dict": "data_analysis/prefix_weight/kgw_prefix_1/w_2.json",
+    "delta": 2.5
+}
