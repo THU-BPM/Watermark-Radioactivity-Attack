@@ -23,7 +23,7 @@ less than 100 words.
 
 Examples of generating 3 task instruction and its answer:
 
-[[Instuction: Give a detailed description of a method for brainstorming an essay.
+[[Instruction: Give a detailed description of a method for brainstorming an essay.
 Input:
 Answer: Mind Mapping is one of the methods for brainstorming an essay. Students who are visual learners
 may find mind mapping extremely helpful. In order to Mind Mapping:
@@ -32,13 +32,13 @@ from a sun, draw lines coming out of the circle. Write an argument or a statemen
 end of each line. Draw another set of lines projecting from these statements and state examples that support
 them. Continue this exercise until you run out of all possibilities imaginable for this topic.]]
 
-[[Instuction: Write a creative or imaginative response to the given prompt.
+[[Instruction: Write a creative or imaginative response to the given prompt.
 Input: You are a time traveler who has just arrived in ancient Egypt. What do you see?
 Answer: Wow! As I step out of my time machine, I’m surrounded by towering pyramids and the warm sun
 beats down on my face. I see Pharaohs riding in grand chariots, and workers building majestic temples. It’s
 like something out of a dream!]]
 
-[[Instuction: Solve a math problem.
+[[Instruction: Solve a math problem.
 Input: A snail is at the bottom of a 20-foot well. Each day, it climbs up 3 feet, but at night, it slips back 2
 feet. How many days will it take for the snail to reach the top of the well?
 Answer: To solve this problem, we first calculate the net distance the snail covers each day: 3 feet up minus 2 feet down, 
